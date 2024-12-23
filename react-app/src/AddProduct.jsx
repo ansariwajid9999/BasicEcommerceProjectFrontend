@@ -17,7 +17,7 @@ const AddProduct = () => {
   };
 
   const addProduct = async (product) => {
-    const res = await axios.post("http://localhost:3030/products/post", product);
+    const res = await axios.post("https://basicecommerceproject.onrender.com/products/post", product);
     console.log(res.data);
   };
 

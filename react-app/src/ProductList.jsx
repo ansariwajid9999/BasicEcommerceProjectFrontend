@@ -6,12 +6,12 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   const getProducts = async () => {
-    const res = await axios.get("http://localhost:3030/api/products");
+    const res = await axios.get("https://basicecommerceproject.onrender.com/api/products");
     console.log(res.data);
     setProducts(res.data);
   };
   const handleClick = async (id) => {
-    const res = await axios.delete(`http://localhost:3030/api/products/delete/${id}`);
+    const res = await axios.delete(`https://basicecommerceproject.onrender.com/api/products/delete/${id}`);
     console.log(res.data);
     if (res.data._id) {
       setProducts(products.filter((p) => p._id !== res.data._id));
